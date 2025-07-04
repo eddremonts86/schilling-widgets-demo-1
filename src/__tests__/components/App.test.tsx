@@ -139,7 +139,7 @@ describe('App Component', () => {
     render(<App />);
 
     const deleteButton = screen.getByTestId('task-delete-btn');
-    
+
     // Verificar task count inicial
     expect(screen.getByTestId('task-count')).toHaveTextContent('5 tasks');
 
@@ -147,7 +147,7 @@ describe('App Component', () => {
 
     // Verificar que console.log fue llamado
     expect(mockConsoleLog).toHaveBeenCalledWith('Task deleted:', '1');
-    
+
     // Verificar que el task count cambió
     expect(screen.getByTestId('task-count')).toHaveTextContent('4 tasks');
   });

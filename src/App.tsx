@@ -5,8 +5,8 @@ import {
   TaskManager,
   ThemeProvider,
 } from 'schilling-widgets-system';
-import SimpleDemo from './SimpleDemo';
 import './App.css';
+import SimpleDemo from './SimpleDemo';
 
 // Mock data for demonstration with proper Task type
 const mockTasks: Task[] = [
