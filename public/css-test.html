@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>CSS Loading Test</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                background: #f5f5f5;
+            }
+            .test-container {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            .success {
+                color: green;
+                font-weight: bold;
+            }
+            .error {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="test-container">
+            <h1>Schilling Widgets CSS Loading Test</h1>
+            <div id="css-status">Checking CSS...</div>
+
+            <h2>Style Test Elements:</h2>
+            <button class="schilling-button schilling-button--primary">
+                Primary Button
+            </button>
+            <div
+                class="schilling-card"
+                style="margin: 10px 0; padding: 10px; border: 1px solid #ccc"
+            >
+                Card Element
+            </div>
+
+            <script>
+                // Check if CSS variables are loaded
+                function checkCSSLoaded() {
+                    const root = document.documentElement;
+                    const primaryColor =
+                        getComputedStyle(root).getPropertyValue("--primary");
+                    const statusDiv = document.getElementById("css-status");
+
+                    if (primaryColor && primaryColor.trim() !== "") {
+                        statusDiv.innerHTML =
+                            '<span class="success">✅ CSS Variables Loaded: ' +
+                            primaryColor +
+                            "</span>";
+                    } else {
+                        statusDiv.innerHTML =
+                            '<span class="error">❌ CSS Variables NOT loaded</span>';
+                    }
+
+                    // Check if schilling classes exist
+                    const testButton =
+                        document.querySelector(".schilling-button");
+                    const buttonStyles = getComputedStyle(testButton);
+                    const hasButtonStyles =
+                        buttonStyles.display === "inline-flex";
+
+                    if (hasButtonStyles) {
+                        statusDiv.innerHTML +=
+                            '<br><span class="success">✅ Schilling Button Styles Loaded</span>';
+                    } else {
+                        statusDiv.innerHTML +=
+                            '<br><span class="error">❌ Schilling Button Styles NOT loaded</span>';
+                    }
+                }
+
+                // Run check after a short delay
+                setTimeout(checkCSSLoaded, 100);
+            </script>
+        </div>
+    </body>
+</html>

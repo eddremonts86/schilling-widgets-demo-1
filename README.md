@@ -1,69 +1,100 @@
-# React + TypeScript + Vite
+# Schilling Widgets Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a comprehensive demo project showcasing the **schilling-widgets-system** library with React + TypeScript + Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This demo includes examples of:
 
-## Expanding the ESLint configuration
+-   **Basic Components**: Buttons, Input fields, Cards, Badges
+-   **Task Manager Widget**: Advanced task management with inline editing, filtering, and virtualization
+-   **Advanced Components**: Tabs, Accordion, and more
+-   **Theme Support**: Light/dark mode theming
+-   **TypeScript Integration**: Full TypeScript support
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+-   Node.js (version 18 or higher)
+-   npm or yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1. Clone this repository or download the source code
+2. Install dependencies:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the development server:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
+```bash
+npm run dev
+```
+
+Open your browser and navigate to `http://localhost:5173` to see the demo.
+
+### Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+## About Schilling Widgets
+
+The `schilling-widgets-system` is a complete UI components library for React applications featuring:
+
+-   Complete component library (Button, Card, Input, etc.)
+-   Advanced widgets (TaskManager, InfiniteTable)
+-   TypeScript-first development
+-   Flexible theming (light/dark mode)
+-   TanStack Query integration
+-   Works with or without Tailwind CSS
+
+## Project Structure
+
+```text
+src/
+  ├── App.tsx          # Main demo application
+  ├── main.tsx         # Application entry point
+  └── index.css        # Global styles and theme variables
+```
+
+## Dependencies
+
+-   **React 19** - Latest React with concurrent features
+-   **TypeScript** - Type-safe development
+-   **Vite** - Fast build tool and dev server
+-   **schilling-widgets-system** - Complete UI library
+
+## License
+
+This demo project is for demonstration purposes.
+{
+files: ['**/*.{ts,tsx}'],
+extends: [
+// Other configs...
+// Enable lint rules for React
+reactX.configs['recommended-typescript'],
+// Enable lint rules for React DOM
+reactDom.configs.recommended,
+],
+languageOptions: {
+parserOptions: {
+project: ['./tsconfig.node.json', './tsconfig.app.json'],
+tsconfigRootDir: import.meta.dirname,
+},
+// other options...
+},
+},
 ])
+
+```
+
 ```
