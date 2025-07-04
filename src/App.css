@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.App-header {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.App-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.App-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.App-main {
+  padding: 0 2rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.container h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: hsl(var(--foreground));
+}
+
+.task-manager-container {
+  margin-bottom: 2rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: hsl(var(--card));
+}
+
+.demo-info {
+  background-color: hsl(var(--muted));
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.demo-info h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+}
+
+.demo-info p {
+  margin-bottom: 1rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.demo-info ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.demo-info li {
+  margin-bottom: 0.5rem;
+}
+
+.demo-controls {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.refresh-btn {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 1rem;
+  }
+
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .App-main {
+    padding: 0 1rem;
+  }
+
+  .task-details {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
